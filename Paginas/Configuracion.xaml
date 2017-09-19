@@ -1,0 +1,30 @@
+﻿<Page x:Class="ContactDIU.Paginas.Configuracion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="325"
+      
+	Title="Configuracion" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="340*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" FontSize="20" Margin="105,21,80,10"> Configuración</TextBlock>
+        <Button Name="Atras" Grid.Row="0" Background="Transparent" Foreground="Transparent" BorderBrush="Transparent" Margin="10,20,258,15" Click="botonAtras" ClipToBounds="True" RenderTransformOrigin="1.302,0.516">
+            <Image Name="AtrasConf" Source="/imagenes/atras.png" Width="47"/>
+        </Button>
+
+        <TextBlock Name="EstiloFuente" HorizontalAlignment="Left" Margin="25,127,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Estilo Fuente" FontSize="15" VerticalAlignment="Top" Width="149"/>
+        <Button Name="Fuente" Content="Italica" Background="Transparent" BorderBrush="Black" HorizontalAlignment="Left" Margin="199,120,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="37" Click="cambiarFuente"/>
+        <TextBlock Name="Cache" HorizontalAlignment="Left" Margin="25,296,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Borrar Caché" FontSize="15" VerticalAlignment="Top" Width="149"/>
+        <Button Name="Resetear" Content="Resetear" Background="Transparent" BorderBrush="Black" HorizontalAlignment="Left" Margin="199,289,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="37" Click="botonReset"/>
+        <TextBlock Name="Theme" HorizontalAlignment="Left" Margin="25,52,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Apariencia" FontSize="15" VerticalAlignment="Top" Width="149"/>
+        <Button Name="Apariencia" Content="Night" Background="Transparent" BorderBrush="Black" HorizontalAlignment="Left" Margin="199,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Height="37" Click="botonApariencia"/>
+        <TextBlock Name="FuenteTam" Text="Tamaño Fuente" Grid.Row="1" FontSize="15" Margin="25,200,150,135"></TextBlock>
+        <Slider Name="Sl" Grid.Row="1" Margin="199,200,20,145" ValueChanged="TamFuente" Value="12" Minimum="11" Maximum="13" AutoToolTipPlacement="TopLeft" TickFrequency="1" IsSnapToTickEnabled="True"></Slider>
+    </Grid>
+</Page>
